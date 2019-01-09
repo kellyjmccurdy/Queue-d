@@ -4,6 +4,11 @@
 
 .nav-btn {
     margin-right: 0.5em;
-    background-color: #132584;
-    color: white;
+    background-color: #5B6893;
+    color: #fff;
+}
+
+.mat-toolbar.mat-primary {
+    background: #274992;
+    color: #fff;
 }

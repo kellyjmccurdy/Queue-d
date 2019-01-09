@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { MatToolbarModule, MatButtonModule, MatInputModule, MatFormFieldModule, MatFormFieldControl } from '@angular/material'
+import { MatToolbarModule, MatButtonModule, MatInputModule, MatFormFieldModule, MatFormFieldControl, MatIconModule, MatCard, MatCardModule,  } from '@angular/material'
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +14,8 @@ const routes = [
   { path: 'register', component: RegistrationComponent },
   { path: '**', component: RegistrationComponent }
 ];
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,9 @@ const routes = [
     MatButtonModule,
     MatInputModule,
     MatFormFieldModule,
+    BrowserAnimationsModule,
+    MatIconModule,
+    MatCardModule,
     HttpClientModule,
     RouterModule.forRoot(routes)
   ],
