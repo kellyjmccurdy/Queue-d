@@ -9,9 +9,12 @@ import { RegistrationComponent } from './components/registration/registration.co
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AuthService } from './services/auth.service';
 import { RouterModule } from '@angular/router';
+import { LoginComponent } from './components/login/login.component';
+import { EventIndexComponent } from './components/event/event-index/event-index.component';
 
 const routes = [
   { path: 'register', component: RegistrationComponent },
+  { path: 'login', component: LoginComponent},
   { path: '**', component: RegistrationComponent }
 ];
 
@@ -19,7 +22,9 @@ const routes = [
   declarations: [
     AppComponent,
     HeaderComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    LoginComponent,
+    EventIndexComponent
   ],
   imports: [
     BrowserModule,
