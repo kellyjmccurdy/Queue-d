@@ -10,11 +10,11 @@ export class EventsService {
     constructor(private _http: HttpClient) { }
 
     getEvents() {
-      return this._http.get(`${ApiUrl}/Events`, { headers: this.getHeaders() });
+      return this._http.get(`${ApiUrl}/Event`, { headers: this.getHeaders() });
     }
 
     createEvent(event: Event) {
-      return this._http.post(`${ApiUrl}/Events`, event, { headers: this.getHeaders()});
+      return this._http.post(`${ApiUrl}/Event`, event, { headers: this.getHeaders()});
     }
 
     private getHeaders() {
