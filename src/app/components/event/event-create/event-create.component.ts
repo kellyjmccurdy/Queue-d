@@ -22,7 +22,8 @@ export class EventCreateComponent implements OnInit {
   createForm() {
     this.eventForm = this._form.group({
       eventTitle: new FormControl,
-      information: new FormControl
+      information: new FormControl,
+      dateCreated: new FormControl
     });
   }
 
