@@ -16,15 +16,18 @@ import { EventCreateComponent } from './components/event/event-create/event-crea
 import { EventDetailComponent } from './components/event/event-detail/event-detail.component';
 import { EventEditComponent } from './components/event/event-edit/event-edit.component';
 import { EventDeleteComponent } from './components/event/event-delete/event-delete.component';
+import { AuthGuard } from './guards/auth.guard';
 
 const routes = [
   { path: 'register', component: RegistrationComponent },
   { path: 'login', component: LoginComponent},
   { 
-    path: 'events', children: [
+    path: 'events', canActivate: [AuthGuard] ,children: [
     { path: '', component: EventIndexComponent},
     { path: 'create', component: EventCreateComponent},
-    { path: 'detail/:id', component: EventDetailComponent}
+    { path: 'detail/:id', component: EventDetailComponent},
+    { path: 'edit/:id', component: EventDetailComponent},
+    { path: 'delete/:id', component: EventDeleteComponent}
   ]
 },
   { path: '**', component: RegistrationComponent }
