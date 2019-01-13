@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { MatToolbarModule, MatButtonModule, MatInputModule, MatFormFieldModule, MatTableModule } from '@angular/material'
+import { MatToolbarModule, MatButtonModule, MatInputModule, MatFormFieldModule, MatTableModule, MatFormFieldControl } from '@angular/material'
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +13,9 @@ import { LoginComponent } from './components/login/login.component';
 import { EventIndexComponent } from './components/event/event-index/event-index.component';
 import { EventsService } from './services/events.service';
 import { EventCreateComponent } from './components/event/event-create/event-create.component';
+import { EventDetailComponent } from './components/event/event-detail/event-detail.component';
+import { EventEditComponent } from './components/event/event-edit/event-edit.component';
+import { EventDeleteComponent } from './components/event/event-delete/event-delete.component';
 
 const routes = [
   { path: 'register', component: RegistrationComponent },
@@ -21,6 +24,7 @@ const routes = [
     path: 'events', children: [
     { path: '', component: EventIndexComponent},
     { path: 'create', component: EventCreateComponent},
+    { path: 'detail/:id', component: EventDetailComponent}
   ]
 },
   { path: '**', component: RegistrationComponent }
@@ -33,7 +37,10 @@ const routes = [
     RegistrationComponent,
     LoginComponent,
     EventIndexComponent,
-    EventCreateComponent
+    EventCreateComponent,
+    EventDetailComponent,
+    EventEditComponent,
+    EventDeleteComponent,
   ],
   imports: [
     BrowserModule,

@@ -25,16 +25,16 @@ export class AuthService {
    
     return this._http.post(`${Api_Url}/Auth/login`, loginInfo).subscribe( (token: Token) => {
       this.userInfo = token;
-      localStorage.setItem('token', token.access_token);
+      localStorage.setItem('id_token', token.access_token);
       this.isLoggedIn.next(true);
       this._router.navigate(['/']);
     });
   }
   
   currentUser(): Observable<Object> {
-    if (!localStorage.getItem('token') ){ return new Observable(observer => observer.next(false)); }
+    if (!localStorage.getItem('id_token') ){ return new Observable(observer => observer.next(false)); }
         
-    return this._http.get(`${Api_Url}`, { headers: this.setHeader()});
+    return this._http.get(`${Api_Url}/Auth/userExists`, { headers: this.setHeader()});
   }
   
   logout() {
@@ -46,7 +46,7 @@ export class AuthService {
   }
 
   private setHeader(): HttpHeaders {
-    return new HttpHeaders().set('Authorization', `Bearer ${localStorage.getItem('token')}` );
+    return new HttpHeaders().set('Authorization', `Bearer ${localStorage.getItem('id_token')}` );
 
   }
 }
