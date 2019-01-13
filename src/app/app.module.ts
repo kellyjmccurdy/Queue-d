@@ -16,9 +16,11 @@ import { EventCreateComponent } from './components/event/event-create/event-crea
 import { EventDetailComponent } from './components/event/event-detail/event-detail.component';
 import { EventEditComponent } from './components/event/event-edit/event-edit.component';
 import { EventDeleteComponent } from './components/event/event-delete/event-delete.component';
+import { WelcomeComponent } from './components/homepage/welcome.component';
 import { AuthGuard } from './guards/auth.guard';
 
 const routes = [
+  { path: '', component: WelcomeComponent},
   { path: 'register', component: RegistrationComponent },
   { path: 'login', component: LoginComponent},
   { 
@@ -37,6 +39,7 @@ const routes = [
   declarations: [
     AppComponent,
     HeaderComponent,
+    WelcomeComponent,
     RegistrationComponent,
     LoginComponent,
     EventIndexComponent,
