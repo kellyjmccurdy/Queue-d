@@ -6,18 +6,18 @@
     <div>
       <div hidden>
         <mat-form-field>
-          <input matInput placeholder="EventId" formControlName="EventId" type="EventId" required [value]="event.EventId" />
+          <input matInput placeholder="EventId" formControlName="EventId" type="EventId" required [value]="event.eventEntityID" />
         </mat-form-field>
       </div>
 
       <div>
         <mat-form-field>
-          <input matInput placeholder="Title" formControlName="Title" type="Title" required [value]="event.Title" />
+          <input matInput placeholder="Title" formControlName="Title" type="Title" required [value]="event.eventTitle" />
         </mat-form-field>
       </div>
       <div>
         <mat-form-field>
-          <input matInput placeholder="Information" formControlName="Information" type="Information" required [value]="event.Information" />
+          <input matInput placeholder="Information" formControlName="Information" type="Information" required [value]="event.information" />
         </mat-form-field>
       </div>
     </div>

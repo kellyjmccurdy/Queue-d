@@ -10,7 +10,7 @@ import { Event } from 'src/app/models/Event';
 })
 export class EventDetailComponent implements OnInit {
 
-  event: Event
+event: Event;
   constructor(private _activatedRoute: ActivatedRoute, private _eventService: EventsService) { }
 
   ngOnInit() {
