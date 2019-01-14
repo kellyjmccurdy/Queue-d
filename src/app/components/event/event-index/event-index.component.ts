@@ -10,8 +10,8 @@ import { MatTableDataSource } from '@angular/material';
 })
 export class EventIndexComponent implements OnInit {
 
-columnNames = ['eventEntityID','eventTitle', 'information'];
-dataSource: MatTableDataSource<Event>
+columnNames = ['eventEntityID','eventTitle', 'information', 'details','buttons'];
+dataSource: MatTableDataSource<Event>;
 
   constructor(private _eventService: EventsService) { }
 

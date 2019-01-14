@@ -18,7 +18,7 @@ export class EventsService {
       return this._http.post(`${ApiUrl}/Event`, event, { headers: this.getHeaders()});
     }
 
-    getEvent( id: string) {
+    getEvent(id: string) {
       return this._http.get(`${ApiUrl}/Event/${id}`, { headers: this.getHeaders() });
     }
 

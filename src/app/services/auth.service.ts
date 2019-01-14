@@ -20,12 +20,13 @@ export class AuthService {
   }
 
   login(loginInfo) { 
-    const str =
-    `grant_type=password&username=${encodeURI(loginInfo.email)}&password=${encodeURI(loginInfo.password)}`;
+    // const str =
+    // `grant_type=password&username=${encodeURI(loginInfo.email)}&password=${encodeURI(loginInfo.password)}`;
    
-    return this._http.post(`${Api_Url}/Auth/login`, loginInfo).subscribe( (token: Token) => {
+    return this._http.post(`${Api_Url}/Auth/login`, loginInfo).subscribe( (token: any) => {
+      console.log(token);
       this.userInfo = token;
-      localStorage.setItem('id_token', token.access_token);
+      localStorage.setItem('id_token', token.token);
       this.isLoggedIn.next(true);
       this._router.navigate(['/']);
     });
@@ -34,14 +35,14 @@ export class AuthService {
   currentUser(): Observable<Object> {
     if (!localStorage.getItem('id_token') ){ return new Observable(observer => observer.next(false)); }
         
-    return this._http.get(`${Api_Url}/Auth/userExists`, { headers: this.setHeader()});
+    return this._http.get(`${Api_Url}/Auth/UserInfo`, { headers: this.setHeader()});
   }
   
   logout() {
     localStorage.clear();
     this.isLoggedIn.next(false);
 
-    this._http.post(`${Api_Url}`, { headers: this.setHeader() } );
+    this._http.post(`${Api_Url}/Auth/Logout`, { headers: this.setHeader() } );
     this._router.navigate(['/login']);
   }
 

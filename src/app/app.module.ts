@@ -24,11 +24,11 @@ const routes = [
   { path: 'register', component: RegistrationComponent },
   { path: 'login', component: LoginComponent},
   { 
-    path: 'events', canActivate: [AuthGuard] ,children: [
+    path: 'events' ,canActivate: [AuthGuard],children: [
     { path: '', component: EventIndexComponent},
     { path: 'create', component: EventCreateComponent},
     { path: 'detail/:id', component: EventDetailComponent},
-    { path: 'edit/:id', component: EventDetailComponent},
+    { path: 'edit/:id', component: EventEditComponent},
     { path: 'delete/:id', component: EventDeleteComponent}
   ]
 },
@@ -63,7 +63,8 @@ const routes = [
   ],
   providers: [
     AuthService,
-    EventsService
+    EventsService,
+    AuthGuard
   ],
   bootstrap: [AppComponent]
 })
