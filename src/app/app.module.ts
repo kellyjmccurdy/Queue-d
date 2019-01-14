@@ -24,7 +24,7 @@ const routes = [
   { path: 'register', component: RegistrationComponent },
   { path: 'login', component: LoginComponent},
   { 
-    path: 'events' ,children: [
+    path: 'events' ,canActivate: [AuthGuard],children: [
     { path: '', component: EventIndexComponent},
     { path: 'create', component: EventCreateComponent},
     { path: 'detail/:id', component: EventDetailComponent},
@@ -63,7 +63,8 @@ const routes = [
   ],
   providers: [
     AuthService,
-    EventsService
+    EventsService,
+    AuthGuard
   ],
   bootstrap: [AppComponent]
 })
