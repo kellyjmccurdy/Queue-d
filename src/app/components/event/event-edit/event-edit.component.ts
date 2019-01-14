@@ -43,10 +43,10 @@ export class EventEditComponent implements OnInit {
       eventEntityID: form.value.EventId,
       eventTitle: form.value.Title,
       information: form.value.Information
-    };
+    }
     this._eventService.updateEvent(updateEvent).subscribe(d => {
       this._router.navigate(['/events']);
-    });
+    })
   }
 
 }

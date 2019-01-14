@@ -2,7 +2,7 @@
 <hr>
 
 <div *ngIf="event">
-  <form (ngSubmit)="onSubmit()" [formGroup]="editEventForm">
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="editEventForm">
     <div>
       <div hidden>
         <mat-form-field>
@@ -12,12 +12,12 @@
 
       <div>
         <mat-form-field>
-          <input matInput placeholder="Title" formControlName="Title" type="Title" required [value]="event.eventTitle" />
+          <input matInput placeholder="Title" formControlName="Title" type="Title" [value]="event.eventTitle" />
         </mat-form-field>
       </div>
       <div>
         <mat-form-field>
-          <input matInput placeholder="Information" formControlName="Information" type="Information" required [value]="event.information" />
+          <input matInput placeholder="Information" formControlName="Information" type="Information" [value]="event.information" />
         </mat-form-field>
       </div>
     </div>
