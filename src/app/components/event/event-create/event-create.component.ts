@@ -22,15 +22,14 @@ export class EventCreateComponent implements OnInit {
   createForm() {
     this.eventForm = this._form.group({
       eventTitle: new FormControl,
-      information: new FormControl,
-      dateCreated: new FormControl
+      information: new FormControl
     });
   }
 
   onSubmit() {
     this._eventService.createEvent(this.eventForm.value).subscribe(data => {
       this._router.navigate(['/events']);
-    })
+    });
   }
 
 }

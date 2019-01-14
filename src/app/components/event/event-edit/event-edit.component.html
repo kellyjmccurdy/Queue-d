@@ -1,0 +1,28 @@
+<h1>Edit Event</h1>
+<hr>
+
+<div *ngIf="event">
+  <form (ngSubmit)="onSubmit()" [formGroup]="editEventForm">
+    <div>
+      <div hidden>
+        <mat-form-field>
+          <input matInput placeholder="EventId" formControlName="EventId" type="EventId" required [value]="event.EventId" />
+        </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field>
+          <input matInput placeholder="Title" formControlName="Title" type="Title" required [value]="event.Title" />
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field>
+          <input matInput placeholder="Information" formControlName="Information" type="Information" required [value]="event.Information" />
+        </mat-form-field>
+      </div>
+    </div>
+    <button mat-raised-button class="nav-btn" color="primary" type="submit">Save</button>
+  </form>
+</div>
+
+<a mat-button routerLink="/events">Back to List</a>

@@ -23,7 +23,7 @@ export class AuthService {
     const str =
     `grant_type=password&username=${encodeURI(loginInfo.email)}&password=${encodeURI(loginInfo.password)}`;
    
-    return this._http.post(`${Api_Url}/Auth/login`, str).subscribe( (token: Token) => {
+    return this._http.post(`${Api_Url}/Auth/login`, loginInfo).subscribe( (token: Token) => {
       this.userInfo = token;
       localStorage.setItem('id_token', token.access_token);
       this.isLoggedIn.next(true);
@@ -34,7 +34,7 @@ export class AuthService {
   currentUser(): Observable<Object> {
     if (!localStorage.getItem('id_token') ){ return new Observable(observer => observer.next(false)); }
         
-    return this._http.get(`${Api_Url}`, { headers: this.setHeader()});
+    return this._http.get(`${Api_Url}/Auth/userExists`, { headers: this.setHeader()});
   }
   
   logout() {

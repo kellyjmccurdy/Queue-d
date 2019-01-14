@@ -1,7 +1,7 @@
 <h1>Create an Event.</h1>
 <hr>
 
-<form #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="eventForm">
+<form (ngSubmit)="onSubmit()" [formGroup]="eventForm">
   <div>
     <div>
       <mat-form-field>
@@ -13,11 +13,11 @@
         <input matInput placeholder="Information" formControlName="information" type="information" required/>
       </mat-form-field>
     </div>
-    <div>
+    <!-- <div>
         <mat-form-field>
           <input matInput placeholder="Date" formControlName="dateCreated" type="dateCreated" required/>
         </mat-form-field>
-      </div>
+      </div> -->
   </div>
   <button mat-raised-button class="nav-btn" color="primary" type="submit">Create Event</button>
 </form>

@@ -6,7 +6,12 @@
   <mat-table #table [dataSource]="dataSource">
     <mat-header-row *matHeaderRowDef="columnNames"></mat-header-row>
     <mat-row *matRowDef="let row; columns: columnNames;"></mat-row>
-  
+    
+    <ng-container matColumnDef="eventEntityID">
+      <mat-header-cell *matHeaderCellDef class="matColumnSize">ID</mat-header-cell>
+      <mat-cell *matCellDef="let event"> {{event.eventEntityID}}</mat-cell>
+    </ng-container>
+
     <ng-container matColumnDef="eventTitle">
       <mat-header-cell *matHeaderCellDef class="matColumnSize">Event Title</mat-header-cell>
       <mat-cell *matCellDef="let event"> {{event.eventTitle}}</mat-cell>
@@ -16,19 +21,21 @@
       <mat-header-cell *matHeaderCellDef class="matColumnSize">Event Info</mat-header-cell>
       <mat-cell *matCellDef="let event"> {{event.information}}</mat-cell>
     </ng-container>
-    
-    <ng-container matColumnDef="dateCreated">
-      <mat-header-cell *matHeaderCellDef class="matColumnSize">Date Created</mat-header-cell>
-      <mat-cell *matCellDef="let event"> {{event.dateCreated}}</mat-cell>
+
+    <ng-container matColumnDef="details">
+        <mat-header-cell *matHeaderCellDef class="matColumnSize"></mat-header-cell>
+        <mat-cell *matCellDef="let event" routerLink="/event/detail/{{event.eventEntityID}}">
+          <i mat-icon class="material-icons">library_books</i>
+        </mat-cell>
     </ng-container>
 
     <ng-container matColumnDef="buttons">
         <mat-header-cell *matHeaderCellDef> </mat-header-cell>
         <mat-cell *matCellDef="let event">
-          <i mat-icon class="material-icons">edit</i>
-          <i mat-icon class="material-icons">delete</i>
+          <i mat-icon class="material-icons" routerLink="/event/edit/{{event.eventEntityID}}">edit</i>
+          <i mat-icon class="material-icons" routerLink="/event/delete/{{event.eventEntityID}}">delete</i>
         </mat-cell>
-      </ng-container>
+    </ng-container>
 
   </mat-table>
 </div>
