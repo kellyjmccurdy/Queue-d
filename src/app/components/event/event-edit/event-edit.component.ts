@@ -3,6 +3,7 @@ import { Event } from 'src/app/models/Event';
 import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
 import { EventsService } from 'src/app/services/events.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { from } from 'rxjs';
 
 @Component({
   selector: 'app-event-edit',
@@ -34,7 +35,15 @@ export class EventEditComponent implements OnInit {
     this.editEventForm = this._form.group({
       EventId: new FormControl(this.event.eventEntityID),
       Title: new FormControl(this.event.eventTitle),
-      Information: new FormControl(this.event.information)
+      Type: new FormControl(this.event.typeOfEvent),
+      Information: new FormControl(this.event.information),
+      Location: new FormControl(this.event.location),
+      StartTime: new FormControl(this.event.startTime),
+      Price: new FormControl(this.event.price),
+      Assigned: new FormControl(this.event.isAssigned),
+      Paid: new FormControl(this.event.isPaid),
+      Complete: new FormControl(this.event.isCompleted),
+      Expired: new FormControl(this.event.isExpired)
     });
   }
 
@@ -42,7 +51,15 @@ export class EventEditComponent implements OnInit {
     const updateEvent: Event = {
       eventEntityID: form.value.EventId,
       eventTitle: form.value.Title,
-      information: form.value.Information
+      typeOfEvent: form.value.Type,
+      information: form.value.Information,
+      location: form.value.Location,
+      startTime: form.value.StartTime,
+      price: form.value.Price,
+      isAssigned: form.value.Assigned,
+      isPaid: form.value.Paid,
+      isCompleted: form.value.Complete,
+      isExpired: form.value.Expired
     }
     this._eventService.updateEvent(updateEvent).subscribe(d => {
       this._router.navigate(['/events']);

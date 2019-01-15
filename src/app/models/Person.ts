@@ -1,6 +1,6 @@
 export interface Person {
-    personEntityID: number;
+    personEntityId: number;
     firstName: string;
     lastName: string;
-    phone: any;
+    phone: string;
 }

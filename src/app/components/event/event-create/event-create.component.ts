@@ -22,11 +22,20 @@ export class EventCreateComponent implements OnInit {
   createForm() {
     this.eventForm = this._form.group({
       eventTitle: new FormControl,
-      information: new FormControl
+      typeOfEvent: new FormControl,
+      information: new FormControl,
+      location: new FormControl,
+      startTime: new FormControl,
+      price: new FormControl,
+      isAssigned: new FormControl,
+      isCompleted: new FormControl,
+      isPaid: new FormControl,
+      isExpired: new FormControl
     });
   }
 
   onSubmit() {
+    console.log(this.eventForm.value)
     this._eventService.createEvent(this.eventForm.value).subscribe(data => {
       this._router.navigate(['/events']);
     });

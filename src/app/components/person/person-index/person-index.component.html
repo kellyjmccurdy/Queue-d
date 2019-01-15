@@ -1,0 +1,45 @@
+<h1>Personal information</h1>
+<a mat-raised-button color="primary" routerLink="/person/create">Create New</a>
+<hr>
+
+<div>
+  <mat-table #table [dataSource]="dataSource">
+    <mat-header-row *matHeaderRowDef="columnNames"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: columnNames;"></mat-row>
+    
+    <ng-container matColumnDef="personEntityId">
+      <mat-header-cell *matHeaderCellDef class="matColumnSize">Q'R Id #</mat-header-cell>
+      <mat-cell *matCellDef="let person"> {{person.personEntityId}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="firstName">
+      <mat-header-cell *matHeaderCellDef class="matColumnSize">First Name</mat-header-cell>
+      <mat-cell *matCellDef="let person"> {{person.firstName}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="lastName">
+      <mat-header-cell *matHeaderCellDef class="matColumnSize">Last Name</mat-header-cell>
+      <mat-cell *matCellDef="let person"> {{person.lastName}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="phone">
+      <mat-header-cell *matHeaderCellDef class="matColumnSize">Phone Number</mat-header-cell>
+      <mat-cell *matCellDef="let person"> {{person.phone}}</mat-cell>
+    </ng-container>
+    
+    <ng-container matColumnDef="details">
+        <mat-header-cell *matHeaderCellDef class="matColumnSize"></mat-header-cell>
+        <mat-cell *matCellDef="let person" routerLink="/person/detail/{{person.personEntityId}}">
+          <i mat-icon class="material-icons">library_books</i>
+        </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="buttons">
+        <mat-header-cell *matHeaderCellDef> </mat-header-cell>
+        <mat-cell *matCellDef="let person">
+          <i mat-icon class="material-icons" routerLink="/person/edit/{{person.personEntityId}}">edit</i>
+          <i mat-icon class="material-icons" routerLink="/person/delete/{{person.personEntityId}}">delete</i>
+        </mat-cell>
+    </ng-container>
+
+  </mat-table>

@@ -17,9 +17,51 @@
       <mat-cell *matCellDef="let event"> {{event.eventTitle}}</mat-cell>
     </ng-container>
 
+    <ng-container matColumnDef="typeOfEvent">
+      <mat-header-cell *matHeaderCellDef class="matColumnSize">Event Type</mat-header-cell>
+      <mat-cell *matCellDef="let event"> {{event.typeOfEvent}}</mat-cell>
+    </ng-container>
+
     <ng-container matColumnDef="information">
       <mat-header-cell *matHeaderCellDef class="matColumnSize">Event Info</mat-header-cell>
       <mat-cell *matCellDef="let event"> {{event.information}}</mat-cell>
+    </ng-container>
+    
+
+    <ng-container matColumnDef="location">
+      <mat-header-cell *matHeaderCellDef class="matColumnSize">Location</mat-header-cell>
+      <mat-cell *matCellDef="let event"> {{event.location}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="startTime">
+      <mat-header-cell *matHeaderCellDef class="matColumnSize">Start Time</mat-header-cell>
+      <mat-cell *matCellDef="let event"> {{event.startTime}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="price">
+      <mat-header-cell *matHeaderCellDef class="matColumnSize">Price</mat-header-cell>
+      <mat-cell *matCellDef="let event"> {{event.price}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="isAssigned">
+      <mat-header-cell *matHeaderCellDef class="matColumnSize">Assigned</mat-header-cell>
+      <mat-cell *matCellDef="let event"> {{event.isAssigned}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="isCompleted">
+      <mat-header-cell *matHeaderCellDef class="matColumnSize">Complete</mat-header-cell>
+      <mat-cell *matCellDef="let event"> {{event.isCompleted}}</mat-cell>
+    </ng-container>
+    
+
+    <ng-container matColumnDef="isPaid">
+      <mat-header-cell *matHeaderCellDef class="matColumnSize">Paid</mat-header-cell>
+      <mat-cell *matCellDef="let event"> {{event.isPaid}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="isExpired">
+      <mat-header-cell *matHeaderCellDef class="matColumnSize">Expired</mat-header-cell>
+      <mat-cell *matCellDef="let event"> {{event.isExpired}}</mat-cell>
     </ng-container>
 
     <ng-container matColumnDef="details">
