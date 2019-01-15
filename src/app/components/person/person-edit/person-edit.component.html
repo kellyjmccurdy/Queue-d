@@ -1,0 +1,33 @@
+<h1>Edit Event</h1>
+<hr>
+
+<div *ngIf="person">
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="editPersonForm">
+    <div>
+      <div hidden>
+        <mat-form-field>
+          <input matInput placeholder="PersonID" formControlName="PersonID" type="EventId" required [value]="person.personEntityId" />
+        </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field>
+          <input matInput placeholder="First Name" formControlName="First" type="Title" [value]="person.firstName" />
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field>
+          <input matInput placeholder="Last Name" formControlName="Last" type="Last" [value]="person.lastName" />
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field>
+          <input matInput placeholder="Phone Number" formControlName="Phone" type="Phone" [value]="person.phone" />
+        </mat-form-field>
+      </div>
+    </div>
+    <button mat-raised-button class="nav-btn" color="primary" type="submit">Save</button>
+  </form>
+</div>
+
+<a mat-button routerLink="/events">Back to List</a>
