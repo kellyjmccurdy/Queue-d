@@ -1,0 +1,20 @@
+<h1>Details</h1>
+
+<hr>
+<div *ngIf="person">
+  <div>
+    <label for="">Q'R Id #:</label>
+    <span> {{person.personEntityId}}</span>
+  </div>
+  <div>
+    <label for="">First Name:</label>
+    <span> {{person.firstName}}</span>
+  </div>
+  <div>
+    <label for="">Last Name:</label>
+    <span> {{person.lastName}}</span>
+  </div>
+</div>
+
+<button mat-button color="accent">Edit</button>
+<button mat-button color="primary" routerLink="/person">Back to List</button>

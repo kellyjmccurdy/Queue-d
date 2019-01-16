@@ -1,0 +1,85 @@
+<h1>Event Index</h1>
+<a mat-raised-button color="primary" routerLink="/events/create">Create New</a>
+<hr>
+
+<div>
+  <mat-table #table [dataSource]="dataSource">
+    <mat-header-row *matHeaderRowDef="columnNames"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: columnNames;"></mat-row>
+    
+    <ng-container matColumnDef="eventEntityID">
+      <mat-header-cell *matHeaderCellDef class="matColumnSize">ID</mat-header-cell>
+      <mat-cell *matCellDef="let event"> {{event.eventEntityID}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="eventTitle">
+      <mat-header-cell *matHeaderCellDef class="matColumnSize">Event Title</mat-header-cell>
+      <mat-cell *matCellDef="let event"> {{event.eventTitle}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="typeOfEvent">
+      <mat-header-cell *matHeaderCellDef class="matColumnSize">Event Type</mat-header-cell>
+      <mat-cell *matCellDef="let event"> {{event.typeOfEvent}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="information">
+      <mat-header-cell *matHeaderCellDef class="matColumnSize">Event Info</mat-header-cell>
+      <mat-cell *matCellDef="let event"> {{event.information}}</mat-cell>
+    </ng-container>
+    
+
+    <ng-container matColumnDef="location">
+      <mat-header-cell *matHeaderCellDef class="matColumnSize">Location</mat-header-cell>
+      <mat-cell *matCellDef="let event"> {{event.location}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="startTime">
+      <mat-header-cell *matHeaderCellDef class="matColumnSize">Start Time</mat-header-cell>
+      <mat-cell *matCellDef="let event"> {{event.startTime}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="price">
+      <mat-header-cell *matHeaderCellDef class="matColumnSize">Price</mat-header-cell>
+      <mat-cell *matCellDef="let event"> {{event.price}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="isAssigned">
+      <mat-header-cell *matHeaderCellDef class="matColumnSize">Assigned</mat-header-cell>
+      <mat-cell *matCellDef="let event"> {{event.isAssigned}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="isCompleted">
+      <mat-header-cell *matHeaderCellDef class="matColumnSize">Complete</mat-header-cell>
+      <mat-cell *matCellDef="let event"> {{event.isCompleted}}</mat-cell>
+    </ng-container>
+    
+
+    <ng-container matColumnDef="isPaid">
+      <mat-header-cell *matHeaderCellDef class="matColumnSize">Paid</mat-header-cell>
+      <mat-cell *matCellDef="let event"> {{event.isPaid}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="isExpired">
+      <mat-header-cell *matHeaderCellDef class="matColumnSize">Expired</mat-header-cell>
+      <mat-cell *matCellDef="let event"> {{event.isExpired}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="details">
+        <mat-header-cell *matHeaderCellDef class="matColumnSize"></mat-header-cell>
+        <mat-cell *matCellDef="let event" routerLink="/events/detail/{{event.eventEntityID}}">
+          <i mat-icon class="material-icons">library_books</i>
+        </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="buttons">
+        <mat-header-cell *matHeaderCellDef> </mat-header-cell>
+        <mat-cell *matCellDef="let event">
+          <div *ngIf="event.ownerId == userId">
+          <i mat-icon class="material-icons" routerLink="/events/edit/{{event.eventEntityID}}">edit</i>
+          <i mat-icon class="material-icons" routerLink="/events/delete/{{event.eventEntityID}}">delete</i>
+          </div>
+        </mat-cell>
+    </ng-container>
+
+  </mat-table>
+</div>

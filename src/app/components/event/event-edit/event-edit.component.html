@@ -1,0 +1,60 @@
+<h1>Edit Event</h1>
+<hr>
+
+<div *ngIf="event">
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="editEventForm">
+    <div>
+      <div hidden>
+        <mat-form-field>
+          <input matInput placeholder="EventId" formControlName="EventId" type="EventId" required [value]="event.eventEntityID" />
+        </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field>
+          <input matInput placeholder="Title" formControlName="Title" type="Title" [value]="event.eventTitle" />
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field>
+          <input matInput placeholder="Type of Event" formControlName="Type" type="Type" [value]="event.typeOfEvent" />
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field>
+          <input matInput placeholder="Information" formControlName="Information" type="Information" [value]="event.information" />
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field>
+          <input matInput placeholder="Address" formControlName="Location" type="Location" [value]="event.location" />
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field>
+          <input matInput placeholder="Title" formControlName="StartTime" type="StartTime" [value]="event.startTime" />
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field>
+          <input matInput placeholder="Bounty Price" formControlName="Price" type="number" [value]="event.price" />
+        </mat-form-field>
+      </div>
+      <div >
+          <mat-checkbox formControlName="Assigned" [checked]='true'>Assigned</mat-checkbox>
+      </div>
+      <div >
+          <mat-checkbox formControlName="Complete">Complete</mat-checkbox>
+      </div>
+      <div >
+          <mat-checkbox formControlName="Paid">Paid</mat-checkbox>
+      </div>
+      <div >
+          <mat-checkbox formControlName="Expired">Expired</mat-checkbox>
+      </div>
+    </div>
+    <button mat-raised-button class="nav-btn" color="primary" type="submit">Save</button>
+  </form>
+</div>
+
+<a mat-button routerLink="/events">Back to List</a>
