@@ -1,8 +1,10 @@
+.imghead:focus{
+    outline: 0;
+}
 
 .head{
     background-color: black;
 }
-
 
 .example-fill-remaining-space {
     flex: 1 1 auto;
