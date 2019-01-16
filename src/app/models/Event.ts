@@ -1,5 +1,5 @@
 export interface Event {
-    eventEntityId: number;
+    eventEntityID: number;
     eventTitle: string;
     typeOfEvent: string;
     information: string;
