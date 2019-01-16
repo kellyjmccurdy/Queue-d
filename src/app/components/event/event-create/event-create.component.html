@@ -32,11 +32,10 @@
       <mat-form-field>
         <input matInput placeholder="Bounty Price" formControlName="price" type="number" />
         <span matPrefix>$&nbsp;</span>
-        <span matSuffix>.00</span>
       </mat-form-field>
     </div>
     <div >
-        <mat-checkbox formControlName="isAssigned">Assigned</mat-checkbox>
+        <mat-checkbox formControlName="isAssigned" [checked]='true'>Assigned</mat-checkbox>
     </div>
     <div >
         <mat-checkbox formControlName="isCompleted">Complete</mat-checkbox>
