@@ -74,8 +74,10 @@
     <ng-container matColumnDef="buttons">
         <mat-header-cell *matHeaderCellDef> </mat-header-cell>
         <mat-cell *matCellDef="let event">
+          <div *ngIf="event.ownerId == userId">
           <i mat-icon class="material-icons" routerLink="/events/edit/{{event.eventEntityID}}">edit</i>
           <i mat-icon class="material-icons" routerLink="/events/delete/{{event.eventEntityID}}">delete</i>
+          </div>
         </mat-cell>
     </ng-container>
 

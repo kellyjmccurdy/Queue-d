@@ -36,6 +36,10 @@ export class EventCreateComponent implements OnInit {
 
   onSubmit() {
     console.log(this.eventForm.value)
+    if (this.eventForm.value.isAssigned == null){this.eventForm.value.isAssigned = false}
+    if (this.eventForm.value.isCompleted == null){this.eventForm.value.isCompleted = false}
+    if (this.eventForm.value.isPaid == null){this.eventForm.value.isPaid = false}
+    if (this.eventForm.value.isExpired == null){this.eventForm.value.isExpired = false}
     this._eventService.createEvent(this.eventForm.value).subscribe(data => {
       this._router.navigate(['/events']);
     });

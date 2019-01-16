@@ -1,3 +1,4 @@
+<div class="card">
 <h1>Create an Event.</h1>
 <hr>
 
@@ -32,19 +33,18 @@
       <mat-form-field>
         <input matInput placeholder="Bounty Price" formControlName="price" type="number" />
         <span matPrefix>$&nbsp;</span>
-        <span matSuffix>.00</span>
       </mat-form-field>
     </div>
-    <div >
-        <mat-checkbox value="false" formControlName="isAssigned">Assigned</mat-checkbox>
+    <div hidden>
+        <mat-checkbox formControlName="isAssigned" value="false">Assigned</mat-checkbox>
     </div>
-    <div >
+    <div hidden>
         <mat-checkbox formControlName="isCompleted">Complete</mat-checkbox>
     </div>
-    <div >
+    <div hidden>
         <mat-checkbox formControlName="isPaid">Paid</mat-checkbox>
     </div>
-    <div >
+    <div hidden>
         <mat-checkbox formControlName="isExpired">Expired</mat-checkbox>
     </div>
     <!-- <div>
@@ -57,3 +57,4 @@
 </form>
 
 <a mat-button routerLink="/events">Back to Events List</a>
+</div>
