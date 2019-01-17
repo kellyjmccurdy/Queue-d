@@ -10,14 +10,13 @@ body, html {
     /* background: #0e0b16; */
     /* color: #e7dfdd; */
 }
-<<<<<<< HEAD
 
 .primary-color {
-    color: #5B6893!important;
+    color: #3D2C2E!important;
 }
 
 .accent-color {
-    color: #886F68!important;
+    color: #5B6893!important;
 }
 
 /* .background-primary-color { */
@@ -29,10 +28,9 @@ body, html {
 } */
 
 .text {
-    color: #000!important;
+    color: #fff!important;
 }
 
-=======
 h1{
     padding-top: 2em;
 }
@@ -43,6 +41,5 @@ h1{
 .card{
     margin-left: 20em;
     margin-right: 20em;
-    box-shadow: 5px 5px 10px rgb(149, 97, 156);
+    box-shadow: 5px 5px 10px #886f68;
 }
->>>>>>> 8fa20faa6c0e76ef94290c5efa44efd04655ad5c
