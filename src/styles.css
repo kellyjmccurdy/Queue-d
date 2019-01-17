@@ -8,3 +8,24 @@ body, html {
     /* background: #0e0b16; */
     /* color: #e7dfdd; */
 }
+
+.primary-color {
+    color: #5B6893!important;
+}
+
+.accent-color {
+    color: #886F68!important;
+}
+
+/* .background-primary-color { */
+   /* #B1BECA!important; 
+}
+
+.background-accent-color {
+    #886F68!important;
+} */
+
+.text {
+    color: #000!important;
+}
+
