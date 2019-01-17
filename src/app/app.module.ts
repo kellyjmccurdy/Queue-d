@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-import { MatToolbarModule, MatButtonModule, MatInputModule, MatFormFieldModule, MatTableModule, MatFormFieldControl, MatSelect, MatCheckbox, MatCheckboxModule } from '@angular/material'
+import { MatToolbarModule, MatButtonModule, MatInputModule, MatFormFieldModule, MatTableModule, MatFormFieldControl, MatCardModule, MatCheckbox, MatCheckboxModule, MAT_CHECKBOX_CLICK_ACTION } from '@angular/material'
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -25,6 +25,7 @@ import { PersonDetailComponent } from './components/person/person-detail/person-
 import { PersonEditComponent } from './components/person/person-edit/person-edit.component';
 import { PersonIndexComponent } from './components/person/person-index/person-index.component';
 import { PersonService } from './services/person.service';
+import { AboutComponent } from './components/about/about.component';
 
 const routes = [
   { path: '', component: WelcomeComponent},
@@ -66,6 +67,7 @@ const routes = [
     PersonDetailComponent,
     PersonEditComponent,
     PersonIndexComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,
@@ -75,6 +77,7 @@ const routes = [
     ReactiveFormsModule,
     MatToolbarModule,
     MatButtonModule,
+    MatCardModule,
     
     // MatSelect,
     MatCheckboxModule,
@@ -88,7 +91,8 @@ const routes = [
     AuthService,
     EventsService,
     PersonService,
-    AuthGuard
+    AuthGuard,
+{provide: MAT_CHECKBOX_CLICK_ACTION, useValue: 'check'}
   ],
   bootstrap: [AppComponent]
 })
