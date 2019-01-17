@@ -26,11 +26,14 @@ import { PersonEditComponent } from './components/person/person-edit/person-edit
 import { PersonIndexComponent } from './components/person/person-index/person-index.component';
 import { PersonService } from './services/person.service';
 import { AboutComponent } from './components/about/about.component';
+import { ConvertToNoPipe } from './convert-to-no.pipe.1';
+import { ConvertToYesPipe } from './convert-to-yes.pipe';
 
 const routes = [
   { path: '', component: WelcomeComponent},
   { path: 'register', component: RegistrationComponent },
   { path: 'login', component: LoginComponent},
+  { path: 'about', component: AboutComponent},
   { path: 'person',canActivate: [AuthGuard],children: [
     { path: '', component: PersonIndexComponent},
     { path: 'create', component: PersonCreateComponent},
@@ -68,6 +71,8 @@ const routes = [
     PersonEditComponent,
     PersonIndexComponent,
     AboutComponent,
+    ConvertToNoPipe,
+    ConvertToYesPipe
   ],
   imports: [
     BrowserModule,
