@@ -4,7 +4,7 @@ import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
 import { EventsService } from 'src/app/services/events.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { from } from 'rxjs';
-import { AlertService } from 'src/app/services/alert.service';
+// import { AlertService } from 'src/app/services/alert.service';
 
 @Component({
   selector: 'app-event-edit',
