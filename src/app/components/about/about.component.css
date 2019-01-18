@@ -1,0 +1,8 @@
+.background-image {
+    background-size: cover;
+    background-repeat: no-repeat; 
+    z-index: 1050;
+    opacity: .4;
+    background-color: transparent;
+    /* background-image: url('https://images.pexels.com/photos/122477/pexels-photo-122477.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'); */
+}
