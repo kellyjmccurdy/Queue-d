@@ -1,12 +1,9 @@
-/* h1{
-    padding-top: 2em;
+h1{
+    padding-top: 0%;
+    font-size: 60px;
 }
 
-.placeholder{
-    color:#e7dfdd;
+h3{
+    font-family: 'Noto Sans', sans-serif;
+
 }
-.card{
-    margin-left: 20em;
-    margin-right: 20em;
-    box-shadow: 5px 5px 10px rgb(149, 97, 156);
-} */
