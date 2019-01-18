@@ -20,8 +20,6 @@ export class AuthService {
   }
 
   login(loginInfo) { 
-    // const str =
-    // `grant_type=password&username=${encodeURI(loginInfo.email)}&password=${encodeURI(loginInfo.password)}`;
    
     return this._http.post(`${Api_Url}/Auth/login`, loginInfo).subscribe( (token: any) => {
       console.log(token);

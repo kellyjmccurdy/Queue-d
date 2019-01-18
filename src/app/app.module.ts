@@ -30,7 +30,7 @@ import { ConvertToNoPipe } from './convert-to-no.pipe.1';
 import { ConvertToYesPipe } from './convert-to-yes.pipe';
 import { FooterComponent } from './components/footer/footer.component';
 import { AlertService } from './services/alert.service';
-import { AlertComponent } from '../app/alerts/alerts.component';
+// import { AlertComponent } from '../app/alerts/alerts.component';
 
 const routes = [
   { path: '', component: WelcomeComponent},
@@ -77,7 +77,7 @@ const routes = [
     AboutComponent,
     ConvertToNoPipe,
     ConvertToYesPipe,
-    AlertComponent
+    // AlertComponent
   ],
   imports: [
     BrowserModule,

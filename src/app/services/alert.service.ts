@@ -24,9 +24,9 @@ export class AlertService {
     }
 
     // subscribe to alerts
-    getAlert(alertId?: string): Observable<any> {
-        return this.subject.asObservable().filter((x: Alert) => x && x.alertId === alertId);
-    }
+    // getAlert(alertId?: string): Observable<any> {
+    //     return this.subject.asObservable().filter((x: Alert) => x && x.alertId === alertId);
+    // }
 
     // convenience methods
     success(message: string) {
