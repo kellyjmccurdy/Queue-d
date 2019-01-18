@@ -6,6 +6,15 @@
     font-family: 'Noto Serif', serif;
 }
 
+#btnstyle2:hover{
+    background-color: blue !important;
+    color: white !important;
+}
+#btnstyle:hover{
+    background-color: white !important;
+    color: black !important;
+}
+
 h4{
     font-family: 'Noto Serif', serif;
 }
