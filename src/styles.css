@@ -43,9 +43,9 @@ h1, h2, h3, h4, h5{
 p{
     font-family: 'Noto Sans', sans-serif;
 }
-/* mat-card{ */
-    /* box-shadow: -5px 10px 10px 5px #414040 !important; */
-/* } */
+/* mat-card{ 
+    box-shadow: -5px 10px 10px 5px #414040 !important;
+} */
 .placeholder {
     color:#e7dfdd;
 }
