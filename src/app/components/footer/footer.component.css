@@ -1,3 +1,7 @@
+.fContainer{
+    padding-top: 10em;
+}
+
 .footer{
     background-color: black;
     padding-top: 0em !important;
@@ -13,6 +17,11 @@
 #contactTitle{
     text-decoration: underline;
     font-weight: 300;
+}
+
+#linkTitle{
+    color: white;
+    text-decoration: underline;
 }
 
 #copyright{
