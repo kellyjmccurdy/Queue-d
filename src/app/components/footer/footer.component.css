@@ -7,14 +7,35 @@
     color: white;
     padding-left: 120px;
     font-family: 'Noto Sans', sans-serif;
-    /* font-weight: 300; */
 }
 
 #contactTitle{
     text-decoration: underline;
+    font-weight: 300;
 }
 
 #copyright{
     color: white;
     font-family: 'Noto Sans', sans-serif;
+}
+
+#buttonRow{
+    text-align: center;
+    list-style: none;
+}
+
+#appleIcon{
+    width: 150px;
+    height: 50px;
+    border-radius: 5px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+#androidIcon{
+    width: 150px;
+    height: 50px;
+    border-radius: 5px;
+    margin-left: 15px;
+    cursor: pointer;
 }
