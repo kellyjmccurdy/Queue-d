@@ -1,6 +1,16 @@
-.form{
-    color:#e7dfdd;
+h1{
+    padding-top: 0%;
+    font-size: 60px;
 }
-.placeholder{
-    color:#e7dfdd;
+
+h3{
+    text-align: left;
+    font-family: 'Noto Sans', sans-serif;
+}
+h4{
+    font-size: 30px;
+
+}
+.btncon{
+    padding-top: 4em;
 }

@@ -1,26 +1,44 @@
-﻿<div class="card">
-  <div class="card-header">
-    {{pageTitle}}
+﻿<div class="container-fluid">
+  <div class="row">
+  <div class="col-md-6">
+    <h1 class="headertxt">Your Time,</h1>
+    <h1 class="headertxt">Your Way</h1>
+    <div class="row" style="padding-top:4em">
+      <div class="col-md-6" style="text-align:justify;">
+    <h4>Jumper</h4>
+    <p style="padding-top:3em">Become a Jumper! Save time by hiring a Placer to wait in line for you! Register an Event so a Placer can save your spot.</p>
+    <button mat-raised-button class="nav-btn" id="btnstyle" routerLink="/events/create" style="background-color: blue; color:white">Hire Placer</button>
+    </div>
+    <div class="col-md-6" style="text-align:justify;">
+    <h4>Placer</h4>
+    <p style="padding-top:3em">Look through a list of Events in your area to find a job that's right for you! Select one and make money by waiting!</p>
+    <button mat-raised-button class="nav-btn" id="btnstyle2" routerLink="/events" >Become Placer</button>
+    </div>
+    </div>
   </div>
-  <div class="card-body">
-    <div class="container-fluid">
-      <div class="text-center">
-        <img src="./assets/images/logo.png"
-             class="img-responsive center-block"
-             style="max-height:300px;padding-bottom:50px" />
+  <div class="col-md-6">
+    <div>
+      <div>
+        <img src="./assets/images/line.png"
+        class="img-responsive center-block"
+        style="max-width:720px; height: 500px;" />
       </div>
+    </div>
+  </div>
+  </div>
+  
+</div>
 
+<!-- 
       <div class="text-center">
         <h3>Your Time, Your Way</h3>
       </div>
 
       <div class="text-center">Create an Account</div>
       <div class="text-center">
-        <a routerLink="/register">Register</a>
+        <a routerLink="/register">Sign Up</a>
       </div>
       <div class="text-center">
         <a routerLink="/login">Log In</a>
       </div>
-    </div>
-  </div>
-</div>
+    </div> -->

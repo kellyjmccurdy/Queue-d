@@ -1,4 +1,11 @@
-.header{
+.imghead:focus{
+    outline: 0;
+}
+.headcontainer{
+    padding-left:2em;
+}
+
+.head{
     background-color: black;
 }
 
@@ -8,6 +15,11 @@
 
 .nav-btn {
     margin-right: 0.5em;
-    background-color: #4717f6;
-    color: #e7dfdd;
+    background-color: black;
+    color: #f1f1f1;
+}
+
+.nav-btn:hover{
+    color:darkblue;
+    background-color: #f1f1f1;
 }

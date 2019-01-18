@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { PersonService } from 'src/app/services/person.service';
 import { ActivatedRoute } from '@angular/router';
 import { Person } from 'src/app/models/Person';
+import { Token } from '@angular/compiler';
 
 @Component({
   selector: 'app-person-detail',
@@ -11,6 +12,7 @@ import { Person } from 'src/app/models/Person';
 export class PersonDetailComponent implements OnInit {
 
 person: Person;
+token: Token;
   constructor(private _activatedRoute: ActivatedRoute, private _personService: PersonService) { }
 
   ngOnInit() {

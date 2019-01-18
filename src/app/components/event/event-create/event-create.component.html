@@ -1,8 +1,14 @@
-<h1>Create an Event.</h1>
-<hr>
+<h1>Register an Event</h1>
+<div class="container-fluid">
+  <div class="row">
+  <div class="col-md-5">
+  <h3>Enter information about the Event that you'd like to hire a Placer for. Once a Placer has been assigned, you will recieve a notification. The Placer will then arrive at the specified location, at the designated start time, and wait for your arrival.</h3>
+</div>
+  <div class="col-md-7">
 
 <form (ngSubmit)="onSubmit()" [formGroup]="eventForm">
-  <div>
+  <mat-card>
+    <h4>Enter Info</h4>
     <div>
       <mat-form-field>
         <input matInput placeholder="Title" formControlName="eventTitle" type="eventTitle" />
@@ -34,16 +40,16 @@
         <span matPrefix>$&nbsp;</span>
       </mat-form-field>
     </div>
-    <div >
-        <mat-checkbox formControlName="isAssigned">Assigned</mat-checkbox>
+    <div hidden>
+        <mat-checkbox formControlName="isAssigned" value="false">Assigned</mat-checkbox>
     </div>
-    <div >
+    <div hidden>
         <mat-checkbox formControlName="isCompleted">Complete</mat-checkbox>
     </div>
-    <div >
+    <div hidden>
         <mat-checkbox formControlName="isPaid">Paid</mat-checkbox>
     </div>
-    <div >
+    <div hidden>
         <mat-checkbox formControlName="isExpired">Expired</mat-checkbox>
     </div>
     <!-- <div>
@@ -51,8 +57,12 @@
           <input matInput placeholder="Date" formControlName="dateCreated" type="dateCreated" required/>
         </mat-form-field>
       </div> -->
-  </div>
-  <button mat-raised-button class="nav-btn" color="primary" type="submit">Create Event</button>
+      <div class="btncon">
+    <button mat-raised-button class="nav-btn" style="background-color: blue; color: white;" type="submit">Register Event</button>
+      </div>
+    </mat-card>
 </form>
 
-<a mat-button routerLink="/events">Back to Events List</a>
+<!-- <a mat-button routerLink="/events">Back to Events List</a> -->
+</div>
+</div>

@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-import { MatToolbarModule, MatButtonModule, MatInputModule, MatFormFieldModule, MatTableModule, MatFormFieldControl, MatSelect, MatCheckbox, MatCheckboxModule } from '@angular/material'
+import { MatToolbarModule, MatButtonModule, MatInputModule, MatFormFieldModule, MatTableModule, MatFormFieldControl, MatCardModule, MatCheckbox, MatCheckboxModule, MAT_CHECKBOX_CLICK_ACTION } from '@angular/material'
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -25,11 +25,20 @@ import { PersonDetailComponent } from './components/person/person-detail/person-
 import { PersonEditComponent } from './components/person/person-edit/person-edit.component';
 import { PersonIndexComponent } from './components/person/person-index/person-index.component';
 import { PersonService } from './services/person.service';
+import { AboutComponent } from './components/about/about.component';
+import { ConvertToNoPipe } from './convert-to-no.pipe.1';
+import { ConvertToYesPipe } from './convert-to-yes.pipe';
+import { FooterComponent } from './components/footer/footer.component';
+
+// import { AlertService } from './services/alert.service';
+
+// import { AlertComponent } from '../app/alerts/alerts.component';
 
 const routes = [
   { path: '', component: WelcomeComponent},
   { path: 'register', component: RegistrationComponent },
   { path: 'login', component: LoginComponent},
+  { path: 'about', component: AboutComponent},
   { path: 'person',canActivate: [AuthGuard],children: [
     { path: '', component: PersonIndexComponent},
     { path: 'create', component: PersonCreateComponent},
@@ -53,6 +62,7 @@ const routes = [
   declarations: [
     AppComponent,
     HeaderComponent,
+    FooterComponent,
     WelcomeComponent,
     RegistrationComponent,
     LoginComponent,
@@ -66,6 +76,10 @@ const routes = [
     PersonDetailComponent,
     PersonEditComponent,
     PersonIndexComponent,
+    AboutComponent,
+    ConvertToNoPipe,
+    ConvertToYesPipe,
+    // AlertComponent
   ],
   imports: [
     BrowserModule,
@@ -75,6 +89,7 @@ const routes = [
     ReactiveFormsModule,
     MatToolbarModule,
     MatButtonModule,
+    MatCardModule,
     
     // MatSelect,
     MatCheckboxModule,
@@ -88,7 +103,9 @@ const routes = [
     AuthService,
     EventsService,
     PersonService,
-    AuthGuard
+    // AlertService,
+    AuthGuard,
+{provide: MAT_CHECKBOX_CLICK_ACTION, useValue: 'check'}
   ],
   bootstrap: [AppComponent]
 })

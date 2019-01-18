@@ -4,8 +4,9 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Router } from '@angular/router'
 import { Token } from '../models/Token'
 import { Observable, Subject } from 'rxjs';
+import { Api_Url } from 'src/environments/environment.prod';
 
-const Api_Url = 'https://localhost:44311/api'
+// const Api_Url = 'https://localhost:44311/api'
 
 @Injectable()
 export class AuthService {
@@ -20,8 +21,6 @@ export class AuthService {
   }
 
   login(loginInfo) { 
-    // const str =
-    // `grant_type=password&username=${encodeURI(loginInfo.email)}&password=${encodeURI(loginInfo.password)}`;
    
     return this._http.post(`${Api_Url}/Auth/login`, loginInfo).subscribe( (token: any) => {
       console.log(token);
@@ -35,7 +34,7 @@ export class AuthService {
   currentUser(): Observable<Object> {
     if (!localStorage.getItem('id_token') ){ return new Observable(observer => observer.next(false)); }
         
-    return this._http.get(`${Api_Url}/Auth/UserInfo`, { headers: this.setHeader()});
+    return this._http.get(`${Api_Url}/Auth/userExists`, { headers: this.setHeader()});
   }
   
   logout() {

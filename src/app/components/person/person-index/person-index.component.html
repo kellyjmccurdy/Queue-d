@@ -1,5 +1,6 @@
-<h1>Personal information</h1>
-<a mat-raised-button color="primary" routerLink="/person/create">Create New</a>
+<mat-card>
+<h1>Personal Information</h1>
+<a mat-raised-button color="primary" routerLink="/person/create">Add New</a>
 <hr>
 
 <div>
@@ -27,19 +28,34 @@
       <mat-cell *matCellDef="let person"> {{person.phone}}</mat-cell>
     </ng-container>
     
-    <ng-container matColumnDef="details">
+    <!-- <ng-container matColumnDef="details">
         <mat-header-cell *matHeaderCellDef class="matColumnSize"></mat-header-cell>
         <mat-cell *matCellDef="let person" routerLink="/person/detail/{{person.personEntityId}}">
           <i mat-icon class="material-icons">library_books</i>
         </mat-cell>
-    </ng-container>
+    </ng-container> -->
 
-    <ng-container matColumnDef="buttons">
+    <ng-container matColumnDef="edit">
         <mat-header-cell *matHeaderCellDef> </mat-header-cell>
         <mat-cell *matCellDef="let person">
-          <i mat-icon class="material-icons" routerLink="/person/edit/{{person.personEntityId}}">edit</i>
-          <i mat-icon class="material-icons" routerLink="/person/delete/{{person.personEntityId}}">delete</i>
+            <button mat-raised-button class="nav-btn" routerLink="/person/edit/{{person.personEntityId}}">UPDATE</button>
         </mat-cell>
-    </ng-container>
-
+      </ng-container>
+      <ng-container matColumnDef="delete">
+          <mat-header-cell *matHeaderCellDef> </mat-header-cell>
+          <mat-cell *matCellDef="let person">
+              <button mat-raised-button class="nav-btn" routerLink="/person/delete/{{person.personEntityId}}">DELETE</button>
+          </mat-cell>
+        </ng-container>
+        
   </mat-table>
+  </div>
+  </mat-card>
+  <div class=container-fluid>
+    <div class=row>
+      <div class=col-md-12>
+        <h4>We value your privacy!</h4>
+        <p>We will never share your personal information with advertisers or other third parties.</p>
+      </div>
+    </div>
+  </div>
