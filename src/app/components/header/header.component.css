@@ -1,6 +1,9 @@
 .imghead:focus{
     outline: 0;
 }
+.headcontainer{
+    padding-left:2em;
+}
 
 .head{
     background-color: #3D2C2E;

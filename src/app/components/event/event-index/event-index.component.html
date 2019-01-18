@@ -1,15 +1,11 @@
-<div class="jumbotron">
   <h1>Active Events</h1>
-    <div>
-        <h3>Choose an event from this active events list for you to wait in line for!</h3>
-      </div>
-</div>
+  <h3>Choose an event from this active events list for you to wait in line for!</h3>
+  <div class="container-fluid">
+      <div class="row">
 <!-- <a mat-raised-button color="primary" routerLink="/events/create">Create New</a> -->
-<div class="container-fluid">
-    <div class="row">
 
 
-<div class="col-md-12">
+<mat-card class="col-md-12">
   <mat-table #table [dataSource]="dataSource">
     <mat-header-row *matHeaderRowDef="columnNames"></mat-header-row>
     <mat-row *matRowDef="let row; columns: columnNames;"></mat-row>
@@ -73,12 +69,12 @@
 
     <ng-container matColumnDef="details">
         <mat-header-cell *matHeaderCellDef class="matColumnSize"></mat-header-cell>
-        <mat-cell *matCellDef="let event" routerLink="/events/detail/{{event.eventEntityID}}">
-          <i mat-icon class="material-icons">library_books</i>
+        <mat-cell *matCellDef="let event" >
+          <button mat-raised-button class="nav-btn" routerLink="/events/detail/{{event.eventEntityID}}">Select</button>
         </mat-cell>
     </ng-container>
 
-    <ng-container matColumnDef="buttons">
+    <!-- <ng-container matColumnDef="buttons">
         <mat-header-cell *matHeaderCellDef> </mat-header-cell>
         <mat-cell *matCellDef="let event">
           <div *ngIf="event.ownerId == userId">
@@ -86,9 +82,9 @@
           <i mat-icon class="material-icons" routerLink="/events/delete/{{event.eventEntityID}}">delete</i>
           </div>
         </mat-cell>
-    </ng-container>
+    </ng-container> -->
 
   </mat-table>
-</div>
+</mat-card>
     </div>
     </div>

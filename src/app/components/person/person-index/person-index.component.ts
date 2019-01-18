@@ -10,7 +10,7 @@ import { Person } from 'src/app/models/Person';
 })
 export class PersonIndexComponent implements OnInit {
 
-columnNames = ['personEntityId', 'firstName', 'lastName', 'phone', 'details', 'buttons'];
+columnNames = ['personEntityId', 'firstName', 'lastName', 'phone', 'edit','delete'];
 dataSource: MatTableDataSource<Person>;
 
   constructor(private _personService: PersonService) { }

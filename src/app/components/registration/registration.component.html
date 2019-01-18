@@ -1,5 +1,7 @@
-<h1>Register.</h1>
-<h4>Create a new account.</h4>
+<div class="conta">
+<mat-card>
+<h1>Register</h1>
+<h4>Create a new account</h4>
 <hr>
 
 <form (ngSubmit)="onSubmit()" [formGroup]="_registerForm">
@@ -20,5 +22,8 @@
       </mat-form-field>
     </div>
   </div>
+  <br>
   <button mat-raised-button class="nav-btn" color="primary" type="submit">Register</button>
 </form>
+</mat-card>
+</div>

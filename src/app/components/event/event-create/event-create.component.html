@@ -1,13 +1,14 @@
-<h1>Save Your Time By Hiring A Placer</h1>
+<h1>Register an Event</h1>
 <div class="container-fluid">
   <div class="row">
-  <div class="col-md-6">
-  <h3>Enter information about the event that you'd like to hire a Placer for. The placer will then arrive at the specified location, at the start time, and wait for your arrival!</h3>
+  <div class="col-md-5">
+  <h3>Enter information about the Event that you'd like to hire a Placer for. Once a Placer has been assigned, you will recieve a notification. The Placer will then arrive at the specified location, at the designated start time, and wait for your arrival.</h3>
 </div>
-  <div class="col-md-6">
+  <div class="col-md-7">
 
 <form (ngSubmit)="onSubmit()" [formGroup]="eventForm">
-  <div>
+  <mat-card>
+    <h4>Enter Info</h4>
     <div>
       <mat-form-field>
         <input matInput placeholder="Title" formControlName="eventTitle" type="eventTitle" />
@@ -56,11 +57,12 @@
           <input matInput placeholder="Date" formControlName="dateCreated" type="dateCreated" required/>
         </mat-form-field>
       </div> -->
-  </div>
-  <button mat-raised-button class="nav-btn" color="primary" type="submit">Create Event</button>
+      <div class="btncon">
+    <button mat-raised-button class="nav-btn" color="primary" type="submit">Register Event</button>
+      </div>
+    </mat-card>
 </form>
 
-<a mat-button routerLink="/events">Back to Events List</a>
-</div>
+<!-- <a mat-button routerLink="/events">Back to Events List</a> -->
 </div>
 </div>
