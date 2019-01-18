@@ -1,6 +1,7 @@
 .footer{
     background-color: black;
-    padding-top: -0.5rem !important;
+    padding-top: 0em !important;
+    padding-bottom: 5.0em !important; 
 }
 
 #contactInfo{
@@ -17,6 +18,8 @@
 #copyright{
     color: white;
     font-family: 'Noto Sans', sans-serif;
+    font-size: 13px;
+    
 }
 
 #buttonRow{
@@ -38,4 +41,34 @@
     border-radius: 5px;
     margin-left: 15px;
     cursor: pointer;
+}
+
+#socialRow{
+    text-align: left;
+}
+
+#facebookImage{
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+#twitterImage{
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+#instagramImage{
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+}
+
+.copyBreak{
+    background-color: lightgray;
+    /* margin-top: 3em;
+    margin-bottom: 3em; */
 }
