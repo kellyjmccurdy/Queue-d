@@ -1,10 +1,12 @@
-<h1>Edit Event</h1>
+<h1>Your Assigned Event</h1>
+<h2>This event is assigned to you! Update your progress as you go.</h2>
 <hr>
 
 <div *ngIf="event">
   <form #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="editEventForm">
-    <div>
-      <div hidden>
+    <div class="container-fluid">
+      <div class="row">
+      <!-- <div hidden>
         <mat-form-field>
           <input matInput placeholder="EventId" formControlName="EventId" type="EventId" required [value]="event.eventEntityID" />
         </mat-form-field>
@@ -39,9 +41,41 @@
         <mat-form-field>
           <input matInput placeholder="Bounty Price" formControlName="Price" type="number" [value]="event.price" />
         </mat-form-field>
+      </div> -->
+      <div class="col-md-6 details">
+        <mat-card>
+      <div hidden>
+          <label for="">EventID:</label>
+          <span> {{event.eventEntityID}}</span>
+        </div>
+        <div>
+          <label for="">Event Title:</label>
+          <span> {{event.eventTitle}}</span>
+        </div>
+        <div>
+          <label for="">Type of Event:</label>
+          <span> {{event.typeOfEvent}}</span>
+        </div>
+        <div>
+          <label for="">Information:</label>
+          <span> {{event.information}}</span>
+        </div>
+        <div>
+          <label for="">Address/Location:</label>
+          <span> {{event.location}}</span>
+        </div>
+        <div>
+          <label for="">Time Start:</label>
+          <span> {{event.startTime}}</span>
+        </div>
+        <div>
+          <label for="">Payment:</label>
+          <span> {{event.price}}</span>
+        </div>
+        </mat-card>
       </div>
-      <div >
-          <mat-checkbox formControlName="Assigned" [checked]='true'>Assigned</mat-checkbox>
+      <div>
+          <mat-checkbox formControlName="Assigned">Assigned</mat-checkbox>
       </div>
       <div >
           <mat-checkbox formControlName="Complete">Complete</mat-checkbox>
@@ -49,12 +83,19 @@
       <div >
           <mat-checkbox formControlName="Paid">Paid</mat-checkbox>
       </div>
-      <div >
+      <div>
           <mat-checkbox formControlName="Expired">Expired</mat-checkbox>
       </div>
     </div>
-    <button mat-raised-button class="nav-btn" color="primary" type="submit">Save</button>
-  </form>
+    </div>
+    <div class="btncontainer">
+      <div class="row">
+        <div class="col-md-6">
+          <a mat-button routerLink="">Back to Home</a>
+        </div>
+              <div class="col-md-6">
+          <button mat-raised-button class="nav-btn" color="primary" type="submit">Update</button>
+          </div>
+    </div>
+  
 </div>
-
-<a mat-button routerLink="/events">Back to List</a>
