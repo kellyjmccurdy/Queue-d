@@ -29,6 +29,8 @@ import { AboutComponent } from './components/about/about.component';
 import { ConvertToNoPipe } from './convert-to-no.pipe.1';
 import { ConvertToYesPipe } from './convert-to-yes.pipe';
 import { FooterComponent } from './components/footer/footer.component';
+import { AlertService } from './services/alert.service';
+import { AlertComponent } from '../app/alerts/alerts.component';
 
 const routes = [
   { path: '', component: WelcomeComponent},
@@ -74,7 +76,8 @@ const routes = [
     PersonIndexComponent,
     AboutComponent,
     ConvertToNoPipe,
-    ConvertToYesPipe
+    ConvertToYesPipe,
+    AlertComponent
   ],
   imports: [
     BrowserModule,
@@ -98,6 +101,7 @@ const routes = [
     AuthService,
     EventsService,
     PersonService,
+    AlertService,
     AuthGuard,
 {provide: MAT_CHECKBOX_CLICK_ACTION, useValue: 'check'}
   ],
