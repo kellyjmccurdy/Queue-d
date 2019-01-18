@@ -1,5 +1,9 @@
 mat-card{
     padding-bottom: 4em;
+    width: 40em;
+}
+.conta{
+    padding-left: 13em;
 }
 h1{
     padding-bottom:1em;

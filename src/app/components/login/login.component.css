@@ -3,4 +3,8 @@ h1{
 }
 mat-card{
     padding-bottom: 2em;
+    width:40em;
+}
+.conta{
+    padding-left:13em;
 }

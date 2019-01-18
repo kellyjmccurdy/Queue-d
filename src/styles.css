@@ -7,7 +7,7 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', 'Arial', sans-serif;
-    /* background: #0e0b16; */
+    /* background: #d7e1ff; */
     /* color: #e7dfdd; */
 }
 h1{
@@ -23,7 +23,7 @@ p{
     font-family: 'Noto Sans', sans-serif;
 }
 mat-card{
-    box-shadow: -5px 10px 10px 5px #414040 !important;
+    /* box-shadow: -5px 10px 10px 5px #414040 !important; */
 }
 .placeholder {
     color:#e7dfdd;

@@ -1,0 +1,17 @@
+mat-card{
+    width:40em;
+}
+h1{
+    padding-bottom: 1em;
+}
+h4{
+    padding-bottom: 4em;
+}
+.conta{
+    padding-left:15em;
+}
+.txtformat{
+    font-size: 30px;
+    font-weight: 300;
+    text-align: center;
+}
