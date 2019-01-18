@@ -11,14 +11,19 @@ body, html {
     /* color: #e7dfdd; */
 }
 h1{
-    padding-top: 2em;
+    padding-top: 0em;
     padding-bottom: 2em;
+    font-size: 70px;
+    
 }
 h1, h2, h3, h4, h5{
     font-family: 'Noto Serif', serif;
 }
 p{
     font-family: 'Noto Sans', sans-serif;
+}
+mat-card{
+    box-shadow: -5px 10px 10px 5px #414040 !important;
 }
 .placeholder {
     color:#e7dfdd;

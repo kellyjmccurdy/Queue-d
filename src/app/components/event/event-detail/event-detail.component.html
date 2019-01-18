@@ -1,50 +1,68 @@
 <h1>Details</h1>
 
-<hr>
-<div *ngIf="event">
-  <div class="container">
-    <div>
-      <label for="">EventID:</label>
-      <span> {{event.eventEntityID}}</span>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6" *ngIf="event">
+      <mat-card class="container">
+        <div hidden>
+          <label for="">EventID:</label>
+          <span> {{event.eventEntityID}}</span>
+        </div>
+        <div>
+          <label for="">Event Title:</label>
+          <span> {{event.eventTitle}}</span>
+        </div>
+        <div>
+          <label for="">Type of Event:</label>
+          <span> {{event.typeOfEvent}}</span>
+        </div>
+        <div>
+          <label for="">Information:</label>
+          <span> {{event.information}}</span>
+        </div>
+        <div>
+          <label for="">Address/Location:</label>
+          <span> {{event.location}}</span>
+        </div>
+        <div>
+          <label for="">Time Start:</label>
+          <span> {{event.startTime}}</span>
+        </div>
+        <div>
+          <label for="">Payment:</label>
+          <span> {{event.price}}</span>
+        </div>
+        <div>
+          <label for="">Already Assigned:</label>
+          <span> {{event.isAssigned}}</span>
+        </div>
+        <div hidden>
+          <label for="">Paid?:</label>
+          <span> {{event.isPaid}}</span>
+        </div>
+        <div hidden>
+          <label for="">Completed?:</label>
+          <span> {{event.isCompleted}}</span>
+        </div>
+      </mat-card>
     </div>
-    <div>
-      <label for="">Title:</label>
-      <span> {{event.eventTitle}}</span>
+    <div class="col-md-6">
+      <h2>Is this the Event that you would like to select?</h2>
+        <div class="row">
+    <div class="col-md-12">          
+        <button class="col-md-6" mat-raised-button color="primary" routerLink="/events/edit/{{event.eventEntityID}}">Confirm</button>
+        </div>
+      </div>
+      <div class="row">
+        <p> </p>
+      </div>
+      <div class="row">
+    <div class="col-md-12">
+        <button class="col-md-6" mat-raised-button color="accent" routerLink="/events">Back</button>
+        </div>
+      </div>
     </div>
-    <div>
-      <label for="">Type of Event:</label>
-      <span> {{event.typeOfEvent}}</span>
-    </div>
-    <div>
-      <label for="">Information:</label>
-      <span> {{event.information}}</span>
-    </div>
-    <div>
-      <label for="">Address/Location:</label>
-      <span> {{event.location}}</span>
-    </div>
-    <div>
-      <label for="">Time Start:</label>
-      <span> {{event.startTime}}</span>
-    </div>
-    <div>
-      <label for="">Set Price:</label>
-      <span>   {{event.price}}</span>
-    </div>
-    <div>
-      <label for="">Assigned?:</label>
-      <span>   {{event.isAssigned}}</span>
-    </div>
-    <div>
-      <label for="">Paid?:</label>
-      <span>   {{event.isPaid}}</span>
-    </div>
-    <div>
-      <label for="">Completed?:</label>
-      <span>   {{event.isCompleted}}</span>
-    </div>
+
   </div>
 </div>
-
-<button mat-button color="accent" routerLink="/events/edit/{{event.eventEntityID}}">Edit</button>
-<button mat-button color="primary" routerLink="/events">Back to List</button>

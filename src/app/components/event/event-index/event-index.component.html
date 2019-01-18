@@ -1,13 +1,11 @@
   <h1>Active Events</h1>
+  <h3>Choose an event from this active events list for you to wait in line for!</h3>
   <div class="container-fluid">
       <div class="row">
-    <div class="col-md-5">
-        <h3>Choose an event from this active events list for you to wait in line for!</h3>
-      </div>
 <!-- <a mat-raised-button color="primary" routerLink="/events/create">Create New</a> -->
 
 
-<div class="col-md-7">
+<mat-card class="col-md-12">
   <mat-table #table [dataSource]="dataSource">
     <mat-header-row *matHeaderRowDef="columnNames"></mat-header-row>
     <mat-row *matRowDef="let row; columns: columnNames;"></mat-row>
@@ -71,8 +69,8 @@
 
     <ng-container matColumnDef="details">
         <mat-header-cell *matHeaderCellDef class="matColumnSize"></mat-header-cell>
-        <mat-cell *matCellDef="let event" routerLink="/events/detail/{{event.eventEntityID}}">
-          <i mat-icon class="material-icons">library_books</i>
+        <mat-cell *matCellDef="let event" >
+          <button mat-raised-button class="nav-btn" routerLink="/events/detail/{{event.eventEntityID}}">Select</button>
         </mat-cell>
     </ng-container>
 
@@ -87,6 +85,6 @@
     </ng-container> -->
 
   </mat-table>
-</div>
+</mat-card>
     </div>
     </div>

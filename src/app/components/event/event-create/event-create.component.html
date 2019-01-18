@@ -7,7 +7,8 @@
   <div class="col-md-7">
 
 <form (ngSubmit)="onSubmit()" [formGroup]="eventForm">
-  <div>
+  <mat-card>
+    <h4>Enter Info</h4>
     <div>
       <mat-form-field>
         <input matInput placeholder="Title" formControlName="eventTitle" type="eventTitle" />
@@ -56,8 +57,10 @@
           <input matInput placeholder="Date" formControlName="dateCreated" type="dateCreated" required/>
         </mat-form-field>
       </div> -->
-  </div>
-  <button mat-raised-button class="nav-btn" color="primary" type="submit">Register Event</button>
+      <div class="btncon">
+    <button mat-raised-button class="nav-btn" color="primary" type="submit">Register Event</button>
+      </div>
+    </mat-card>
 </form>
 
 <!-- <a mat-button routerLink="/events">Back to Events List</a> -->

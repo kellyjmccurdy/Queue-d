@@ -4,6 +4,7 @@ import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
 import { EventsService } from 'src/app/services/events.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { from } from 'rxjs';
+import { AlertService } from 'src/app/services/alert.service';
 
 @Component({
   selector: 'app-event-edit',
@@ -61,6 +62,7 @@ export class EventEditComponent implements OnInit {
       isCompleted: form.value.Complete,
       isExpired: form.value.Expired
     }
+    
     this._eventService.updateEvent(updateEvent).subscribe(d => {
       this._router.navigate(['/events']);
     })
