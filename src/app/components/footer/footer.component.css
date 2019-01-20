@@ -1,12 +1,12 @@
 .footer{
-    background-color: black;
+    background-color: #3D2C2E;
     padding-top: -0.5rem !important;
 }
 
 #contactInfo{
     color: white;
     padding-left: 120px;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Serif', serif;
     /* font-weight: 300; */
 }
 
@@ -16,5 +16,5 @@
 
 #copyright{
     color: white;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Serif', serif;
 }
