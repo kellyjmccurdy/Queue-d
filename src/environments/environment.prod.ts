@@ -5,7 +5,7 @@ switch (window.location.hostname){
     Api_Url +='https://localhost:44311/api'
     break;
   default:
-  Api_Url += 'https://localhost:44311/api';
+  Api_Url += 'https://queuedapi.azurewebsites.net/api';
 
 }
 
