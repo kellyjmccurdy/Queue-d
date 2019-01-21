@@ -1,3 +1,7 @@
+.fContainer{
+    padding-top: 10em;
+}
+
 .footer{
     background-color: #3D2C2E;
     padding-top: -0.5rem !important;
@@ -12,9 +16,68 @@
 
 #contactTitle{
     text-decoration: underline;
+    font-weight: 300;
+}
+
+#linkTitle{
+    color: white;
+    text-decoration: underline;
 }
 
 #copyright{
     color: white;
     font-family: 'Noto Serif', serif;
+    font-size: 13px;
+    
+}
+
+#buttonRow{
+    text-align: center;
+    list-style: none;
+}
+
+#appleIcon{
+    width: 150px;
+    height: 50px;
+    border-radius: 5px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+#androidIcon{
+    width: 150px;
+    height: 50px;
+    border-radius: 5px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+#socialRow{
+    text-align: left;
+}
+
+#facebookImage{
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+#twitterImage{
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+#instagramImage{
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+}
+
+.copyBreak{
+    background-color: lightgray;
+    /* margin-top: 3em;
+    margin-bottom: 3em; */
 }
