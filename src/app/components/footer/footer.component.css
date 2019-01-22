@@ -11,7 +11,7 @@
     color: white;
     padding-left: 120px;
     font-family: 'Noto Serif', serif;
-    /* font-weight: 300; */
+    font-weight: 300;
 }
 
 #contactTitle{
@@ -78,6 +78,6 @@
 
 .copyBreak{
     background-color: lightgray;
-    /* margin-top: 3em;
-    margin-bottom: 3em; */
-}
+    margin-top: 3em;
+    margin-bottom: 3em;
+} 
