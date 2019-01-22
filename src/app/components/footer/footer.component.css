@@ -3,15 +3,15 @@
 }
 
 .footer{
-    background-color: black;
-    padding-top: 0em !important;
-    padding-bottom: 5.0em !important; 
+    background-color: #3D2C2E;
+    padding-top: -0.5rem !important;
 }
 
 #contactInfo{
     color: white;
     padding-left: 120px;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Serif', serif;
+    font-weight: 300;
 }
 
 #contactTitle{
@@ -26,7 +26,7 @@
 
 #copyright{
     color: white;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Serif', serif;
     font-size: 13px;
     
 }
@@ -78,6 +78,6 @@
 
 .copyBreak{
     background-color: lightgray;
-    /* margin-top: 3em;
-    margin-bottom: 3em; */
-}
+    margin-top: 3em;
+    margin-bottom: 3em;
+} 
