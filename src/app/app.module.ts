@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-import { MatToolbarModule, MatButtonModule, MatInputModule, MatFormFieldModule, MatTableModule, MatFormFieldControl, MatCardModule, MatCheckbox, MatCheckboxModule, MAT_CHECKBOX_CLICK_ACTION } from '@angular/material'
+import { MatToolbarModule, MatButtonModule, MatInputModule, MatFormFieldModule, MatTableModule, MatFormFieldControl, MatCardModule, MatCheckbox, MatCheckboxModule, MAT_CHECKBOX_CLICK_ACTION, MatMenuModule } from '@angular/material'
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -90,6 +90,7 @@ const routes = [
     MatToolbarModule,
     MatButtonModule,
     MatCardModule,
+    MatMenuModule,
     
     // MatSelect,
     MatCheckboxModule,
