@@ -2,10 +2,10 @@ export let Api_Url = '';
 
 switch (window.location.hostname){
   case '':
-    Api_Url +='https://localhost:44311/api'
+    Api_Url +='https://queuedapideployment.azurewebsites.net'
     break;
   default:
-  Api_Url += 'https://queuedapi.azurewebsites.net/api';
+  Api_Url += 'https://queuedapideployment.azurewebsites.net';
 
 }
 
