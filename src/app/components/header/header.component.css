@@ -6,7 +6,7 @@
 }
 
 .head{
-    background-color: black;
+    background-color: #3D2C2E;
 }
 
 .example-fill-remaining-space {
@@ -15,11 +15,11 @@
 
 .nav-btn {
     margin-right: 0.5em;
-    background-color: black;
+    background-color: #3D2C2E;
     color: #f1f1f1;
 }
 
 .nav-btn:hover{
-    color:darkblue;
+    color:#5B6893;
     background-color: #f1f1f1;
 }

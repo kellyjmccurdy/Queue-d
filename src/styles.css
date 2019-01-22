@@ -10,6 +10,27 @@ body, html {
     /* background: #d7e1ff; */
     /* color: #e7dfdd; */
 }
+
+.primary-color {
+    color: #3D2C2E!important;
+}
+
+.accent-color {
+    color: #5B6893!important;
+}
+
+/* .background-primary-color { */
+   /* #B1BECA!important; 
+}
+
+.background-accent-color {
+    #886F68!important;
+} */
+
+.text {
+    color: #fff!important;
+}
+
 h1{
     padding-top: 0em;
     padding-bottom: 2em;
@@ -22,14 +43,12 @@ h1, h2, h3, h4, h5{
 p{
     font-family: 'Noto Sans', sans-serif;
 }
-mat-card{
-    /* box-shadow: -5px 10px 10px 5px #414040 !important; */
-}
+/* git s */
 .placeholder {
     color:#e7dfdd;
 }
 .card{
     margin-left: 20em;
     margin-right: 20em;
-    box-shadow: 5px 5px 10px rgb(149, 97, 156);
+    box-shadow: 5px 5px 10px #886f68;
 }
