@@ -7,6 +7,7 @@ switch (window.location.hostname){
   default:
   Api_Url += 'https://queuedapideployment.azurewebsites.net/api';
 
+
 }
 
 export const environment = {
