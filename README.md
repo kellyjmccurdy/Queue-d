@@ -3,6 +3,8 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.4.
 This is a prototype 1.0 build version of our first Team Application. Queued is designed to eventually become a full release application for customers to purchase "Placers" to save their place in lines in busy public settings, such as amusement parks, movie theaters, busy metropolitan shopping centers, etc..
 
+Our app is currently deployed at https://queuedapp.herokuapp.com/, and is in alpha build territory.
+
 When you start the app, you will be routed to the homepage. In order to continue, you will have to register for an account, otherwise the AuthGard will prevent you from viewing the other components.
 
 Once your account has been created, you should then continue on to the "Account Info" button on the top right of the nav-bar. Using angular forms, we will then store your personal information in our database through our custom API (here is a link to that https://github.com/JGCaban/Queued-BE).
