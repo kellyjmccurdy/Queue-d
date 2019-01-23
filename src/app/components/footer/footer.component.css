@@ -1,37 +1,57 @@
-.fContainer{
-    padding-top: 10em;
-}
-
-.footer{
+.page-footer {
     background-color: #3D2C2E;
-    padding-top: -0.5rem !important;
+    color: azure
 }
 
-#contactInfo{
-    color: white;
+#useful a {
+    color: #B7BFEB;
+}
+
+#copy a {
+    color: #B7BFEB;
+}
+
+hr {
+    color: #5B6893;
+    background-color: #5B6893;
+    height: 2px;
+    border: none;
+}
+
+/* .fContainer{
+    padding-top: 10em;
+} */
+
+/* .footer{
+    background-color: #3D2C2E;
+    padding-top: -0.5rem !important; 
+} */
+
+/* #contactInfo{
+    color: whitesmoke;
     padding-left: 120px;
     font-family: 'Noto Serif', serif;
     font-weight: 300;
-}
+}  */
 
-#contactTitle{
+/* #contactTitle{
+    color: whitesmoke;
     text-decoration: underline;
-    font-weight: 300;
-}
+    font-weight: 300; 
+}  */
 
-#linkTitle{
+/* #linkTitle{
     color: white;
-    text-decoration: underline;
-}
+    text-decoration: underline; 
+} */
 
-#copyright{
+/* #copyright{
     color: white;
     font-family: 'Noto Serif', serif;
     font-size: 13px;
-    
-}
+} */
 
-#buttonRow{
+/* #buttonRow{
     text-align: center;
     list-style: none;
 }
@@ -80,4 +100,5 @@
     background-color: lightgray;
     margin-top: 3em;
     margin-bottom: 3em;
-} 
+}  */
+
