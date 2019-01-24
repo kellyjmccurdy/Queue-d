@@ -1,17 +1,20 @@
 <div class="header">
-  <mat-toolbar class="head">
-    <div class="headcontainer">
-    <span class="imghead" routerLink="">
-        <img src="./assets/images/queue-d_logo.jpg"
-        style="max-height:80px;padding-top:5px" />
-    </span>
-    <button class="imghead" mat-raised-button class="nav-btn" routerLink="/events/create"  >Save Time</button>
-    <button class="imghead" mat-raised-button class="nav-btn" routerLink="/events"  >Make Money</button>
-    <button class="imghead" mat-raised-button class="nav-btn" routerLink="/about"  >About Us</button>
+    <mat-toolbar class="head">
+      <div class="headcontainer">
+      <span class="imghead" routerLink="">
+          <img src="./assets/images/queue-d_logo.jpg"
+          style="max-height:80px;padding-top:5px" />
+      </span>
+      <button class="imghead" mat-raised-button class="nav-btn" routerLink="/events/create"  >Save Time</button>
+      <button class="imghead" mat-raised-button class="nav-btn" routerLink="/events"  >Make Money</button>
+      <button class="imghead" mat-raised-button class="nav-btn" routerLink="/about"  >About Us</button>
+    </div>
+      <span class="example-fill-remaining-space"></span>
+      <button mat-button [matMenuTriggerFor]="menu" style="color: white">Menu</button>
+      <mat-menu #menu="matMenu">
+      <button mat-menu-item class="imghead"   routerLink="/login"   >Login</button>
+      <button mat-menu-item class="imghead"   routerLink="/register"  >Sign Up</button>
+      <button mat-menu-item class="imghead"   routerLink="/person"  >Account Info</button>
+      </mat-menu>
+    </mat-toolbar>
   </div>
-    <span class="example-fill-remaining-space"></span>
-    <button class="imghead" mat-raised-button class="nav-btn" routerLink="/login"   >Login</button>
-    <button class="imghead" mat-raised-button class="nav-btn" routerLink="/register"  >Sign Up</button>
-    <button class="imghead" mat-raised-button class="nav-btn" routerLink="/person"  >Account Info</button>
-  </mat-toolbar>
-</div>

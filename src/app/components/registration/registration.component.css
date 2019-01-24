@@ -8,3 +8,8 @@ mat-card{
 h1{
     padding-bottom:1em;
 }
+
+.nav-btn {
+    background-color: #5B6893;
+    color: white;
+}
